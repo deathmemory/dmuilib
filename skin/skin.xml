@@ -23,7 +23,7 @@
         <HorizontalLayout width="798" height="520">
             <Container width="798" height="480">
                 <Button name="btn_runCmd" text="执行" tooltip="执行对应的命令" float="true" pos="476,144,0,0" width="60" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="button_normal.png" hotimage="button_hover.png" pushedimage="button_pushed.png" />
-                <Combo name="accountcombo" text="张三" tooltip="请点击这里选择您准备使用的账号" float="true" pos="329,144,0,0" width="140" height="20" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="file=&apos;Combo_nor.bmp&apos; corner=&apos;2,2,24,2&apos;" hotimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" pushedimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" dropboxsize="0,150">
+                <Combo name="accountcombo" tooltip="请点击这里选择您准备使用的账号" float="true" pos="329,144,0,0" width="140" height="20" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="file=&apos;Combo_nor.bmp&apos; corner=&apos;2,2,24,2&apos;" hotimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" pushedimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" dropboxsize="0,150">
                     <ListLabelElement />
                     <ListLabelElement />
                 </Combo>
@@ -33,10 +33,10 @@
         </HorizontalLayout>
         <HorizontalLayout height="24">
             <Text text="{c #386382}主程序版本：7.3.0.2001{/c}" float="true" pos="0,5,0,0" width="200" height="19" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
-            <Text text="{c #386382}备用木马库：2010-9-28{/c}" float="true" pos="155,5,0,0" width="245" height="19" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
             <Button text="检查更新" float="true" pos="305,5,0,0" width="55" height="13" textcolor="#FF337833" disabledtextcolor="#FFA7A6AA" align="center" />
             <Control float="true" pos="550,4,0,0" width="16" height="16" bkimage="cloud.png" />
             <Text text="{c #386382}已成功连接至360云安全中心{/c}" float="true" pos="570,5,0,0" width="230" height="19" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+            <Text text="{c #386382}备用木马库：2010-9-28{/c}" float="true" pos="155,5,0,0" width="245" height="19" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
         </HorizontalLayout>
     </VerticalLayout>
 </Window>

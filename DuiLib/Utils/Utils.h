@@ -167,6 +167,8 @@ namespace DuiLib
 		const CDuiString& operator+=(LPCTSTR pstr);
 		const CDuiString& operator+=(const TCHAR ch);
 
+		friend bool operator==(const LPCTSTR str1,const CDuiString& str2) { return (str2.Compare(str1)==0); }
+		friend bool operator==(const CDuiString& str1,const CDuiString& str2) { return (str2.Compare(str1)==0); }
 		bool operator == (LPCTSTR str) const;
 		bool operator != (LPCTSTR str) const;
 		bool operator <= (LPCTSTR str) const;
