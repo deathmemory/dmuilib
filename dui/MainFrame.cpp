@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "MainFrame.h"
 
-
+#define commandcombo				_T("accountcombo")
+#define commandedit					_T("accountedit")
 CMainFrame::CMainFrame(){
 	m_pCloseBtn = NULL;
 	m_pMaxBtn = NULL;
@@ -18,6 +19,11 @@ void CMainFrame::Init() {
 	m_pMaxBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("maxbtn")));
 	m_pRestoreBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("restorebtn")));
 	m_pMinBtn = static_cast<CButtonUI*>(m_pm.FindControl(_T("minbtn")));
+
+	CComboUI* pAccountCombo = static_cast<CComboUI*>(m_pm.FindControl(commandcombo));
+	CEditUI* pAccountEdit = static_cast<CEditUI*>(m_pm.FindControl(commandedit));
+	if( pAccountCombo && pAccountEdit ) pAccountEdit->SetText(pAccountCombo->GetText());
+	pAccountEdit->SetFocus();
 }
 
 void CMainFrame::OnPrepare() {
@@ -42,8 +48,7 @@ void CMainFrame::Notify(TNotifyUI& msg)
 			MessageBox(this->m_hWnd, _T("run command"), _T("test"), MB_OK|MB_ICONINFORMATION);
 		}
 	}
-	else if(msg.sType==_T("selectchanged"))
-	{
+	else if(msg.sType==DUI_MSGTYPE_SELECTCHANGED){
 		CDuiString name = msg.pSender->GetName();
 		CTabLayoutUI* pControl = static_cast<CTabLayoutUI*>(m_pm.FindControl(_T("switch")));
 		if(name==_T("examine"))
@@ -63,14 +68,16 @@ void CMainFrame::Notify(TNotifyUI& msg)
 		else if(name==_T("tool"))
 			pControl->SelectItem(7);
 	}
+	else if( msg.sType == DUI_MSGTYPE_ITEMSELECT ) {
+		if( msg.pSender->GetName() == commandcombo ) {
+			CEditUI* pAccountEdit = static_cast<CEditUI*>(m_pm.FindControl(commandedit));
+			if( pAccountEdit ) pAccountEdit->SetText(msg.pSender->GetText());
+		}
+	}
 }
 
 LRESULT CMainFrame::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
-	CDuiString str = _T("name");
-	if (_T("name") == str)
-		__asm nop
-
 	LONG styleValue = ::GetWindowLong(*this, GWL_STYLE);
 	styleValue &= ~WS_CAPTION;
 	::SetWindowLong(*this, GWL_STYLE, styleValue | WS_CLIPSIBLINGS | WS_CLIPCHILDREN);

@@ -23,11 +23,11 @@
         <HorizontalLayout width="798" height="520">
             <Container width="798" height="480">
                 <Button name="btn_runCmd" text="执行" tooltip="执行对应的命令" float="true" pos="476,144,0,0" width="60" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="button_normal.png" hotimage="button_hover.png" pushedimage="button_pushed.png" />
-                <Combo name="accountcombo" tooltip="请点击这里选择您准备使用的账号" float="true" pos="329,144,0,0" width="140" height="20" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="file=&apos;Combo_nor.bmp&apos; corner=&apos;2,2,24,2&apos;" hotimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" pushedimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" dropboxsize="0,150">
+                <Combo name="accountcombo" text="张三" tooltip="请点击这里选择您准备使用的账号" float="true" pos="329,144,0,0" width="140" height="20" itemtextcolor="#FF000000" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" normalimage="file=&apos;Combo_nor.bmp&apos; corner=&apos;2,2,24,2&apos;" hotimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" pushedimage="file=&apos;Combo_over.bmp&apos; corner=&apos;2,2,24,2&apos;" dropboxsize="0,150">
                     <ListLabelElement />
                     <ListLabelElement />
                 </Combo>
-                <Edit tooltip="输入命令" float="true" pos="330,145,0,0" width="118" height="18" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Edit name="accountedit" tooltip="输入命令" float="true" pos="330,145,0,0" width="118" height="18" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
                 <Label text="选择命令:" float="true" pos="255,144,0,0" width="65" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
             </Container>
         </HorizontalLayout>
